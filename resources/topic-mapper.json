@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.0",
+  "description": "Tech-Arsenal Topic-Resource Mapping Database",
+  "last_updated": "2025-08-08",
+  "curriculum_topics": {
+    "programming-foundations": {
+      "title": "Programming Foundations (Python)",
+      "module": "foundations",
+      "keywords": ["python", "programming", "basics", "syntax", "fundamentals"]
+    },
+    "intermediate-python": {
+      "title": "Intermediate Python & Tooling",
+      "module": "foundations",
+      "keywords": ["python", "oop", "functional", "testing", "packaging"]
+    },
+    "advanced-python": {
+      "title": "Advanced Python & Metaprogramming",
+      "module": "foundations",
+      "keywords": ["python", "metaprogramming", "decorators", "performance", "memory"]
+    },
+    "data-structures": {
+      "title": "Data Structures & Algorithms",
+      "module": "foundations",
+      "keywords": ["algorithms", "data-structures", "complexity", "optimization"]
+    },
+    "product-engineering": {
+      "title": "Product & Data-Driven Engineering",
+      "module": "foundations",
+      "keywords": ["product", "metrics", "analytics", "experimentation", "ab-testing"]
+    },
+    "version-control": {
+      "title": "Version Control & Collaboration",
+      "module": "backend-systems",
+      "keywords": ["git", "github", "collaboration", "workflows", "ci-cd"]
+    },
+    "software-design": {
+      "title": "Software Design & Patterns",
+      "module": "backend-systems",
+      "keywords": ["design-patterns", "solid", "architecture", "refactoring", "clean-code"]
+    },
+    "backend-engineering": {
+      "title": "Backend Engineering (FastAPI)",
+      "module": "backend-systems",
+      "keywords": ["fastapi", "api", "backend", "asgi", "web-development"]
+    },
+    "domain-driven-design": {
+      "title": "Domain-Driven Design & Microservices",
+      "module": "backend-systems",
+      "keywords": ["ddd", "microservices", "bounded-context", "event-sourcing"]
+    },
+    "databases": {
+      "title": "Databases & Storage Systems",
+      "module": "backend-systems",
+      "keywords": ["databases", "sql", "nosql", "postgresql", "redis", "storage"]
+    },
+    "operating-systems": {
+      "title": "Operating Systems, Networking & Concurrency",
+      "module": "backend-systems",
+      "keywords": ["os", "networking", "concurrency", "linux", "tcp-ip", "threading"]
+    },
+    "frontend-engineering": {
+      "title": "Front-End Engineering (TypeScript, React, WebGL)",
+      "module": "frontend-fullstack",
+      "keywords": ["react", "typescript", "frontend", "javascript", "webgl", "ui"]
+    },
+    "fullstack-integration": {
+      "title": "Full-Stack Integration Patterns",
+      "module": "frontend-fullstack",
+      "keywords": ["fullstack", "integration", "spa", "ssr", "api-integration"]
+    },
+    "unix-shell": {
+      "title": "Unix Shell & Build Tooling",
+      "module": "frontend-fullstack",
+      "keywords": ["bash", "shell", "unix", "build-tools", "automation"]
+    },
+    "containerization": {
+      "title": "Containerization & Orchestration (Docker → Kubernetes)",
+      "module": "frontend-fullstack",
+      "keywords": ["docker", "kubernetes", "containers", "orchestration", "k8s"]
+    },
+    "devops-cicd": {
+      "title": "DevOps & Infrastructure-as-Code",
+      "module": "platform-devops",
+      "keywords": ["devops", "iac", "terraform", "ansible", "ci-cd", "automation"]
+    },
+    "monitoring-observability": {
+      "title": "Monitoring & Observability Integration",
+      "module": "platform-devops",
+      "keywords": ["monitoring", "observability", "metrics", "logging", "tracing"]
+    },
+    "security-engineering": {
+      "title": "Security & Compliance",
+      "module": "platform-devops",
+      "keywords": ["security", "compliance", "threat-modeling", "vulnerability", "infosec"]
+    },
+    "cryptography": {
+      "title": "Cryptography & PKI",
+      "module": "platform-devops",
+      "keywords": ["cryptography", "pki", "encryption", "certificates", "security"]
+    },
+    "ml-ai-engineering": {
+      "title": "Machine Learning & AI Engineering",
+      "module": "platform-devops",
+      "keywords": ["machine-learning", "ai", "mlops", "model-deployment", "feature-engineering"]
+    },
+    "streaming-data": {
+      "title": "Streaming Data & ML Engineering",
+      "module": "data-streaming",
+      "keywords": ["kafka", "flink", "streaming", "real-time", "event-processing"]
+    },
+    "data-engineering": {
+      "title": "Data Engineering & ETL",
+      "module": "data-streaming",
+      "keywords": ["data-engineering", "etl", "pipelines", "airflow", "data-processing"]
+    },
+    "data-warehousing": {
+      "title": "Data Warehousing & Analytics",
+      "module": "data-streaming",
+      "keywords": ["data-warehouse", "analytics", "olap", "dimensional-modeling", "bi"]
+    },
+    "realtime-systems": {
+      "title": "Real-Time Systems & Streaming",
+      "module": "data-streaming",
+      "keywords": ["real-time", "streaming", "low-latency", "event-driven", "cep"]
+    },
+    "message-queues": {
+      "title": "Message Queues & Event-Driven Architecture",
+      "module": "data-streaming",
+      "keywords": ["message-queues", "event-driven", "pub-sub", "messaging", "async"]
+    },
+    "api-design": {
+      "title": "API Design & Documentation",
+      "module": "api-performance",
+      "keywords": ["api-design", "rest", "documentation", "openapi", "api-gateway"]
+    },
+    "graphql": {
+      "title": "GraphQL & Advanced API Patterns",
+      "module": "api-performance",
+      "keywords": ["graphql", "api", "federation", "schema", "resolvers"]
+    },
+    "search-retrieval": {
+      "title": "Search & Information Retrieval",
+      "module": "api-performance",
+      "keywords": ["search", "elasticsearch", "information-retrieval", "indexing", "nlp"]
+    },
+    "performance-engineering": {
+      "title": "Performance Engineering & Optimization",
+      "module": "api-performance",
+      "keywords": ["performance", "optimization", "profiling", "benchmarking", "scalability"]
+    },
+    "production-debugging": {
+      "title": "Production Debugging & eBPF",
+      "module": "api-performance",
+      "keywords": ["debugging", "ebpf", "production", "troubleshooting", "observability"]
+    },
+    "system-design": {
+      "title": "System Design & Scalability Drills",
+      "module": "architecture-testing",
+      "keywords": ["system-design", "scalability", "architecture", "distributed-systems"]
+    },
+    "testing-strategies": {
+      "title": "Testing & Quality Engineering",
+      "module": "architecture-testing",
+      "keywords": ["testing", "quality", "tdd", "integration-testing", "automation"]
+    },
+    "cloud-platforms": {
+      "title": "Cloud Platforms & Architecture",
+      "module": "architecture-testing",
+      "keywords": ["cloud", "aws", "gcp", "azure", "cloud-native", "serverless"]
+    },
+    "sre-reliability": {
+      "title": "Site Reliability Engineering (Deep Dive)",
+      "module": "architecture-testing",
+      "keywords": ["sre", "reliability", "slo", "sli", "incident-response"]
+    },
+    "observability": {
+      "title": "Advanced Observability Integration",
+      "module": "architecture-testing",
+      "keywords": ["observability", "telemetry", "opentelemetry", "distributed-tracing"]
+    },
+    "chaos-engineering": {
+      "title": "Chaos Engineering & Game Days",
+      "module": "advanced-topics",
+      "keywords": ["chaos-engineering", "resilience", "fault-injection", "game-days"]
+    },
+    "production-scenarios": {
+      "title": "Production Integration Scenarios",
+      "module": "advanced-topics",
+      "keywords": ["production", "deployment", "integration", "rollout", "canary"]
+    },
+    "accessibility": {
+      "title": "Accessibility & Inclusive Design",
+      "module": "advanced-topics",
+      "keywords": ["accessibility", "a11y", "wcag", "inclusive-design", "usability"]
+    },
+    "frontend-build": {
+      "title": "Front-End Build & Performance Pipeline",
+      "module": "advanced-topics",
+      "keywords": ["build-tools", "webpack", "vite", "performance", "optimization"]
+    },
+    "mobile-development": {
+      "title": "Mobile & Cross-Platform Development",
+      "module": "advanced-topics",
+      "keywords": ["mobile", "flutter", "react-native", "cross-platform", "ios", "android"]
+    },
+    "native-fundamentals": {
+      "title": "Mobile Native Fundamentals",
+      "module": "professional-skills",
+      "keywords": ["ios", "android", "swift", "kotlin", "native", "mobile"]
+    },
+    "authorization": {
+      "title": "Authorization & Policy-as-Code",
+      "module": "professional-skills",
+      "keywords": ["authorization", "rbac", "opa", "policy", "security", "access-control"]
+    },
+    "developer-experience": {
+      "title": "Developer-Experience (DX) & Inner-Source",
+      "module": "professional-skills",
+      "keywords": ["dx", "developer-experience", "inner-source", "tooling", "productivity"]
+    },
+    "human-skills": {
+      "title": "Human & Team Skills",
+      "module": "professional-skills",
+      "keywords": ["communication", "leadership", "mentoring", "teamwork", "soft-skills"]
+    }
+  },
+  "resources": [
+    {
+      "id": "example-resource",
+      "title": "Example Resource Entry",
+      "author": "Author Name",
+      "type": "book",
+      "file_path": "books/example.pdf",
+      "url": null,
+      "curriculum_topics": ["programming-foundations", "software-design"],
+      "difficulty": "beginner",
+      "tags": ["example", "template", "getting-started"],
+      "description": "This is an example resource entry showing the expected format",
+      "quality_rating": 4,
+      "added_date": "2025-08-08",
+      "notes": "Replace this with actual resources"
+    }
+  ],
+  "resource_types": {
+    "book": {
+      "description": "Books and comprehensive guides (PDF files stored locally)",
+      "storage": "local",
+      "directory": "books/"
+    },
+    "paper": {
+      "description": "Research papers, whitepapers, and academic articles",
+      "storage": "url",
+      "directory": null
+    },
+    "video": {
+      "description": "Video tutorials, courses, and recorded talks",
+      "storage": "url", 
+      "directory": null
+    },
+    "tool": {
+      "description": "Software tools, utilities, and online platforms",
+      "storage": "url",
+      "directory": null
+    },
+    "dataset": {
+      "description": "Sample datasets, training data, and examples",
+      "storage": "url",
+      "directory": null
+    },
+    "documentation": {
+      "description": "Official documentation and reference materials",
+      "storage": "url",
+      "directory": null
+    },
+    "tutorial": {
+      "description": "Interactive tutorials and learning platforms",
+      "storage": "url",
+      "directory": null
+    }
+  },
+  "difficulty_levels": ["beginner", "intermediate", "advanced"],
+  "quality_ratings": {
+    "5": "Excellent - Essential resource",
+    "4": "Very Good - Highly recommended",
+    "3": "Good - Recommended",
+    "2": "Fair - Useful but limited",
+    "1": "Poor - Not recommended"
+  }
+}
