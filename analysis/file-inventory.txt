@@ -1,0 +1,195 @@
+# ./my-learning Repository File Inventory
+# Generated: 2025-11-25
+# This inventory lists all files in the repository organized by directory structure
+
+## Root Directory Files
+.DS_Store
+LICENSE
+project-structure-analysis.md
+readme.md
+report_progress.md
+
+## Analysis Directory (analysis/)
+analysis/file-inventory.txt
+analysis/repository-analysis.md
+
+## Arsenal Directory (Arsenal/)
+Arsenal/curriculum/TECH-UNIVERSE-SKILLS-MAP.md
+
+## Curriculum Directory (curriculum/)
+curriculum/.DS_Store
+curriculum/README.md
+
+### Advanced Topics (curriculum/advanced-topics/)
+curriculum/advanced-topics/accessibility.md
+curriculum/advanced-topics/chaos-engineering.md
+curriculum/advanced-topics/frontend-build.md
+curriculum/advanced-topics/mobile-development.md
+curriculum/advanced-topics/production-scenarios.md
+
+### API Performance (curriculum/api-performance/)
+curriculum/api-performance/api-design.md
+curriculum/api-performance/graphql.md
+curriculum/api-performance/performance-engineering.md
+curriculum/api-performance/production-debugging.md
+curriculum/api-performance/search-retrieval.md
+
+### Architecture Testing (curriculum/architecture-testing/)
+curriculum/architecture-testing/cloud-platforms.md
+curriculum/architecture-testing/observability.md
+curriculum/architecture-testing/sre-reliability.md
+curriculum/architecture-testing/system-design.md
+curriculum/architecture-testing/testing-strategies.md
+
+### Backend Systems (curriculum/backend-systems/)
+curriculum/backend-systems/backend-engineering.md
+curriculum/backend-systems/databases.md
+curriculum/backend-systems/domain-driven-design.md
+curriculum/backend-systems/operating-systems.md
+curriculum/backend-systems/software-design.md
+curriculum/backend-systems/version-control.md
+
+### Data Streaming (curriculum/data-streaming/)
+curriculum/data-streaming/data-engineering.md
+curriculum/data-streaming/data-warehousing.md
+curriculum/data-streaming/message-queues.md
+curriculum/data-streaming/realtime-systems.md
+curriculum/data-streaming/streaming-data.md
+
+### Foundations (curriculum/foundations/)
+curriculum/foundations/advanced-python.md
+curriculum/foundations/data-structures.md
+curriculum/foundations/intermediate-python.md
+curriculum/foundations/product-engineering.md
+curriculum/foundations/programming-foundations.md
+curriculum/foundations/version-control.md
+
+### Frontend Fullstack (curriculum/frontend-fullstack/)
+curriculum/frontend-fullstack/containerization.md
+curriculum/frontend-fullstack/frontend-engineering.md
+curriculum/frontend-fullstack/fullstack-integration.md
+curriculum/frontend-fullstack/unix-shell.md
+
+### Platform DevOps (curriculum/platform-devops/)
+curriculum/platform-devops/cryptography.md
+curriculum/platform-devops/devops-cicd.md
+curriculum/platform-devops/ml-ai-engineering.md
+curriculum/platform-devops/monitoring-observability.md
+curriculum/platform-devops/security-engineering.md
+
+### Professional Skills (curriculum/professional-skills/)
+curriculum/professional-skills/authorization.md
+curriculum/professional-skills/developer-experience.md
+curriculum/professional-skills/human-skills.md
+curriculum/professional-skills/native-fundamentals.md
+
+## Docs Directory (docs/)
+docs/maintenance.md
+
+## Karm Directory (Karm/)
+Karm/README.md
+Karm/TRANSFORMATION_REPORT.md
+
+### Karm Analysis (Karm/analysis/)
+Karm/analysis/research-notes.md
+
+### Career Paths (Karm/career-paths/)
+Karm/career-paths/backend-engineer.md
+Karm/career-paths/fullstack-engineer.md
+Karm/career-paths/ml-engineer.md
+
+### Karm Curriculum (Karm/curriculum/)
+Karm/curriculum/README.md
+
+#### 01-foundations (Karm/curriculum/01-foundations/)
+Karm/curriculum/01-foundations/data-structures-algorithms/README.md
+Karm/curriculum/01-foundations/programming-fundamentals/README.md
+
+#### 02-backend-engineering (Karm/curriculum/02-backend-engineering/)
+Karm/curriculum/02-backend-engineering/api-design/README.md
+Karm/curriculum/02-backend-engineering/databases/README.md
+
+#### 03-frontend-fullstack (Karm/curriculum/03-frontend-fullstack/)
+Karm/curriculum/03-frontend-fullstack/frontend-engineering/README.md
+
+#### 04-ai-ml-engineering (Karm/curriculum/04-ai-ml-engineering/)
+Karm/curriculum/04-ai-ml-engineering/README.md
+
+#### 05-devops-cloud (Karm/curriculum/05-devops-cloud/)
+Karm/curriculum/05-devops-cloud/cloud-platforms/README.md
+Karm/curriculum/05-devops-cloud/devops-cicd/README.md
+
+#### 06-data-engineering (Karm/curriculum/06-data-engineering/)
+Karm/curriculum/06-data-engineering/README.md
+
+#### 07-security-engineering (Karm/curriculum/07-security-engineering/)
+Karm/curriculum/07-security-engineering/README.md
+
+#### 08-performance-engineering (Karm/curriculum/08-performance-engineering/)
+Karm/curriculum/08-performance-engineering/README.md
+
+#### 09-professional-skills (Karm/curriculum/09-professional-skills/)
+Karm/curriculum/09-professional-skills/README.md
+
+#### 10-emerging-tech (Karm/curriculum/10-emerging-tech/)
+Karm/curriculum/10-emerging-tech/README.md
+
+### Karm Projects (Karm/projects/)
+Karm/projects/README.md
+
+#### Beginner Projects (Karm/projects/beginner/)
+Karm/projects/beginner/personal-finance-tracker/README.md
+Karm/projects/beginner/task-manager-cli/README.md
+Karm/projects/beginner/weather-data-analyzer/README.md
+
+#### Intermediate Projects (Karm/projects/intermediate/)
+Karm/projects/intermediate/ecommerce-catalog-api/README.md
+Karm/projects/intermediate/realtime-chat-application/README.md
+Karm/projects/intermediate/restful-blog-api/README.md
+
+#### Advanced Projects (Karm/projects/advanced/)
+Karm/projects/advanced/distributed-file-processing-platform/README.md
+Karm/projects/advanced/ml-enabled-task-prioritization/README.md
+
+### Karm Roadmaps (Karm/roadmaps/)
+Karm/roadmaps/30-day-sprint.md
+Karm/roadmaps/90-day-intensive.md
+
+### Karm Skill Testing (Karm/skill-testing/)
+Karm/skill-testing/ai-ml-engineering-tests.md
+Karm/skill-testing/backend-engineering-tests.md
+Karm/skill-testing/data-engineering-tests.md
+Karm/skill-testing/devops-cloud-tests.md
+Karm/skill-testing/emerging-tech-tests.md
+Karm/skill-testing/frontend-fullstack-tests.md
+Karm/skill-testing/performance-engineering-tests.md
+Karm/skill-testing/programming-foundations-tests.md
+Karm/skill-testing/remaining-skills-tests.md
+Karm/skill-testing/security-tests.md
+
+### Karm Tools (Karm/tools/)
+Karm/tools/progress-tracker.py
+Karm/tools/resource-validator.py
+Karm/tools/skill-assessor.py
+
+## LMS Platform Directory (lms-platform/)
+lms-platform/.DS_Store
+lms-platform/apps/.DS_Store
+lms-platform/apps/api/.DS_Store
+lms-platform/apps/web/.next/server/app-paths-manifest.json
+lms-platform/apps/web/.next/server/middleware-manifest.json
+lms-platform/apps/web/.next/server/pages-manifest.json
+lms-platform/apps/web/.next/server/server-reference-manifest.json
+lms-platform/apps/web/.next/types/package.json
+
+## Markdown Directory (Markdown/)
+Markdown/all.md
+Markdown/prompt_week_goals.md
+Markdown/TECH-UNIVERSE-SKILLS-MAP.md
+Markdown/test.md
+
+## Resources Directory (resources/)
+resources/.DS_Store
+resources/README.md
+resources/resource-linking-template.md
+resources/topic-mapper.json

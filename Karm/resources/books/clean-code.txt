@@ -1,0 +1,75 @@
+# Clean Code: A Handbook of Agile Software Craftsmanship
+**Author**: Robert C. Martin
+**Pages**: 464
+**ISBN**: 978-0132350884
+**Publication Date**: August 1, 2008
+
+## Overview
+The bible of software craftsmanship, teaching developers how to write clean, maintainable, and efficient code. Essential reading for any serious software developer.
+
+## Key Topics Covered
+- Meaningful names and naming conventions
+- Functions: size, parameters, side effects
+- Comments: when and how to write them
+- Formatting and code structure
+- Objects and data structures
+- Error handling and exceptions
+- Boundaries and third-party code
+- Unit testing and test-driven development
+- Code smells and refactoring techniques
+
+## Chapters Overview
+1. Clean Code - Introduction to clean code principles
+2. Meaningful Names - Variable, function, and class naming
+3. Functions - Writing clean, focused functions
+4. Comments - When and how to comment code
+5. Formatting - Code layout and readability
+6. Objects and Data Structures - Encapsulation and abstraction
+7. Error Handling - Exceptions and error management
+8. Boundaries - Working with third-party code
+9. Unit Tests - Writing testable code
+10. Classes - Organizing classes and inheritance
+11. Systems - System-level architecture
+12. Emergence - Simple design and refactoring
+13. Concurrency - Threading and synchronization
+14. Successive Refinement - Case study
+15. JUnit Internals - Framework design
+16. Refactoring SerialDate - Legacy code improvement
+17. Smells and Heuristics - Code quality checklist
+
+## Why Essential for Curriculum
+- Industry standard for code quality
+- Timeless principles applicable to any language
+- Practical examples and refactoring techniques
+- Foundation for professional software development
+
+## Learning Path Integration
+- **Foundation Level**: Basic naming and formatting
+- **Intermediate Level**: Functions, classes, and error handling
+- **Advanced Level**: System design and refactoring
+- **Expert Level**: Code smells and architectural principles
+
+## Code Examples
+- Java examples throughout (easily applicable to other languages)
+- Before/after refactoring examples
+- Anti-patterns and how to fix them
+
+## Influence and Impact
+- Shaped modern software development practices
+- Influenced countless development teams and coding standards
+- Foundation for agile development and extreme programming
+
+## Complementary Resources
+- "Refactoring" by Martin Fowler
+- "Code Complete" by Steve McConnell
+- "The Clean Coder" by Robert C. Martin
+- "Effective Java" by Joshua Bloch
+
+## Reviews and Ratings
+- Amazon Rating: 4.7/5 stars
+- 1,500+ reviews
+- "Must-read for every developer" - Common sentiment
+- Influential in shaping coding best practices
+
+---
+*Note: This is a descriptive placeholder. The actual book PDF would be placed here for download.*

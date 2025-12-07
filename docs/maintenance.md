@@ -1,117 +1,180 @@
-# 🛠️ Tech-Arsenal Maintenance Guide (Flexible Structure)
+# 🛠️ Tech-Arsenal Maintenance Guide
 
-This guide explains how to maintain and update the flexible, non-numbered modular Tech-Arsenal curriculum.
+Professional maintenance guide for the Tech-Arsenal modular curriculum system. This document provides comprehensive workflows, best practices, and technical instructions for maintainers and contributors.
 
-## 📁 Project Structure
+## 📋 Overview
+
+The Tech-Arsenal system operates as a **fully modular, non-numbered curriculum architecture** designed for maximum flexibility and maintainability. The system consists of three main components:
+
+- **Curriculum Modules**: Topic-organized learning content in independent sections
+- **Resources System**: Curated learning materials mapped via JSON database
+- **Documentation**: Maintenance guides and navigation hubs
+
+### System Architecture
 
 ```
 Arsenal/
-├── curriculum/                 # Complete modular curriculum structure
-│   ├── README.md              # Primary navigation hub with learning paths
-│   ├── foundations/           # Core programming & data structures
-│   ├── backend-systems/       # Backend engineering & systems
-│   ├── frontend-fullstack/    # Frontend & integration
-│   ├── platform-devops/       # Platform, DevOps & ML/AI
-│   ├── data-streaming/        # Data engineering & streaming
-│   ├── api-performance/       # APIs & performance optimization
-│   ├── architecture-testing/  # Architecture & testing
-│   ├── advanced-topics/       # Specialized advanced topics
-│   └── professional-skills/   # Professional & team skills
-├── resources/                 # Learning resources system
-│   ├── README.md              # Resources documentation
-│   ├── topic-mapper.json      # Topic-resource mapping database
-│   ├── resource-linking-template.md  # Citation template
+├── curriculum/                 # Modular learning curriculum
+│   ├── foundations/           # Programming fundamentals & data structures
+│   ├── backend-systems/       # Backend engineering & architecture
+│   ├── frontend-fullstack/    # Frontend development & integration
+│   ├── platform-devops/       # DevOps, security & cloud platforms
+│   ├── data-streaming/        # Data engineering & real-time systems
+│   ├── api-performance/       # API design & performance optimization
+│   ├── architecture-testing/  # System design & testing strategies
+│   ├── advanced-topics/       # Specialized advanced domains
+│   └── professional-skills/   # Team & career development
+├── resources/                 # Learning resources database
+│   ├── topic-mapper.json      # Resource metadata & mappings
+│   ├── resource-linking-template.md  # Citation format standard
 │   └── books/                 # Local PDF storage
-├── docs/                      # Documentation and guides
-│   └── maintenance.md         # This file
-└── readme.md                  # Project overview and navigation
+├── docs/                      # Documentation & guides
+└── readme.md                  # System overview & navigation
 ```
 
-## 📚 Resources System Maintenance
+## 🎯 Responsibilities
 
-### Managing Learning Resources
+### Content Maintainers
+- **Curriculum Updates**: Add/modify learning modules and section content
+- **Resource Curation**: Maintain quality learning materials and metadata
+- **Quality Assurance**: Ensure content accuracy and navigation integrity
+- **System Health**: Monitor for broken links and structural issues
 
-The resources system supports the curriculum with curated learning materials:
+### Contributors
+- **Pull Requests**: Follow contribution guidelines for new features
+- **Issue Reporting**: Document bugs and improvement opportunities
+- **Content Enhancement**: Propose additions and corrections
+- **Review Participation**: Quality checks on community submissions
 
-#### Adding New PDF Books
-1. **Add PDF to local storage**:
+## 🔄 Maintenance Tasks
+
+### Curriculum Module Management
+
+#### Adding New Content Sections
+
+1. **Navigate to appropriate module**:
    ```bash
-   # Place PDF in resources/books/
-   cp new-book.pdf resources/books/
+   cd curriculum/foundations/
+   # Or: backend-systems/, platform-devops/, etc.
+   ```
+
+2. **Create section file**:
+   ```bash
+   touch advanced-algorithms.md
+   ```
+
+3. **Add standard navigation header**:
+   ```markdown
+   [← Back to Curriculum](../README.md)
+
+   ---
+
+   # Advanced Algorithms
+   ```
+
+4. **Update curriculum README**:
+   ```bash
+   vim ../README.md
+   ```
+   Add new section to appropriate module listings.
+
+#### Moving Sections Between Modules
+
+1. **Relocate the file**:
+   ```bash
+   mv curriculum/old-module/section.md curriculum/new-module/
+   ```
+
+2. **Update curriculum navigation**:
+   - Move section entry in `curriculum/README.md`
+   - Update any cross-references in related sections
+
+#### Module Structure Reorganization
+
+1. **Plan new organization**: Document changes for team alignment
+2. **Move files systematically**:
+   ```bash
+   mkdir curriculum/new-module/
+   mv curriculum/old-module/section.md curriculum/new-module/
+   ```
+3. **Update curriculum README** and navigation links
+4. **Validate all references** are still accurate
+
+### Resources System Management
+
+#### Adding PDF Resources
+
+1. **Store PDF file**:
+   ```bash
+   cp source-book.pdf resources/books/
+   ls resources/books/source-book.pdf  # Verify placement
    ```
 
 2. **Update topic mapper**:
    ```bash
-   # Edit resources/topic-mapper.json
    vim resources/topic-mapper.json
    ```
-   Add entry with metadata:
+
+3. **Add complete metadata entry**:
    ```json
    {
-     "id": "unique-book-id",
-     "title": "Book Title",
+     "id": "unique-pdf-id",
+     "title": "Source Book Title",
      "type": "book",
      "format": "pdf",
-     "path": "books/new-book.pdf",
-     "topics": ["relevant-topic-1", "relevant-topic-2"],
+     "path": "books/source-book.pdf",
+     "topics": ["topic-1", "topic-2"],
      "difficulty": "intermediate",
      "quality_rating": 5,
-     "description": "Brief description"
+     "description": "Comprehensive coverage of topic areas",
+     "author": "Author Name",
+     "date_added": "2024-01-15"
    }
    ```
 
-3. **Cite in curriculum sections**:
-   Use the standardized template from `resources/resource-linking-template.md`:
+4. **Cite in curriculum sections** using template:
    ```markdown
    ## 📚 **Learning Resources**
-   
+
    ### 📖 **Books**
-   - 📖 **[Book Title](../resources/books/new-book.pdf)** ⭐⭐⭐⭐⭐ 🎯 Intermediate  
-     Comprehensive guide covering [specific topics]
+   - 📖 **[Book Title](../resources/books/source-book.pdf)** ⭐⭐⭐⭐⭐ 🎯 Intermediate
+     Definitive guide covering fundamental concepts and advanced applications
    ```
 
 #### Adding URL-Based Resources
-1. **Update topic mapper** with URL resources:
+
+1. **Update topic mapper** with URL metadata:
    ```json
    {
-     "id": "resource-id",
-     "title": "Resource Title",
-     "type": "video|paper|tool|dataset",
-     "url": "https://example.com/resource",
-     "topics": ["topic-1"],
-     "difficulty": "beginner|intermediate|advanced",
-     "quality_rating": 1-5,
-     "description": "Resource description"
+     "id": "video-tutorial-101",
+     "title": "Video Tutorial",
+     "type": "video",
+     "url": "https://example.com/video-tutorial",
+     "topics": ["tutorial-topic"],
+     "difficulty": "beginner",
+     "quality_rating": 4,
+     "description": "Step-by-step video tutorial with practical examples",
+     "author": "Expert Instructor",
+     "date_added": "2024-01-15"
    }
    ```
 
-2. **Cite in curriculum sections**:
+2. **Cite in curriculum using template**:
    ```markdown
    ### 🎥 **Videos**
-   - 🎥 **[Video Title](https://example.com)** ⭐⭐⭐⭐ 🎯 Beginner  
-     Excellent tutorial on [topic]
-   
-   ### 📄 **Papers**
-   - 📄 **[Paper Title](https://arxiv.org/paper)** ⭐⭐⭐⭐⭐ 🎯 Advanced  
-     Seminal research on [topic]
+   - 🎥 **[Video Title](https://example.com/video-tutorial)** ⭐⭐⭐⭐ 🎯 Beginner
+     Excellent visual tutorial with code examples and explanations
    ```
 
-#### Resource Quality Control
-1. **Quality ratings**: Use 1-5 star system (⭐⭐⭐⭐⭐)
-2. **Difficulty levels**: 🎯 Beginner, Intermediate, Advanced
-3. **Resource types**: 📖 Books, 🎥 Videos, 📄 Papers, 🛠️ Tools, 📊 Datasets
-4. **Regular review**: Update outdated resources quarterly
+#### Topic Mapper Database Management
 
-### Topic Mapper Maintenance
-
-#### Database Structure
-The `topic-mapper.json` follows this schema:
+**Metadata Schema**:
 ```json
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "YYYY-MM-DD",
-    "total_resources": 0
+    "last_updated": "2024-01-15",
+    "total_resources": 147
   },
   "resources": [
     {
@@ -124,7 +187,7 @@ The `topic-mapper.json` follows this schema:
       "topics": ["topic-tags"],
       "difficulty": "beginner|intermediate|advanced",
       "quality_rating": 1-5,
-      "description": "Brief description",
+      "description": "Brief but informative description",
       "author": "Author Name",
       "date_added": "YYYY-MM-DD"
     }
@@ -132,232 +195,322 @@ The `topic-mapper.json` follows this schema:
 }
 ```
 
-#### Regular Maintenance Tasks
-1. **Update metadata**: Increment version, update last_updated, count resources
-2. **Validate links**: Check URL resources quarterly for broken links
-3. **Review quality**: Re-evaluate resource ratings based on community feedback
-4. **Topic alignment**: Ensure resource topics match curriculum sections
-
-## 🔄 Common Maintenance Tasks
-
-### Adding New Content to a Section
-
-1. **Navigate to the appropriate module directory**:
-   ```bash
-   cd curriculum/foundations/          # For foundational topics
-   cd curriculum/backend-systems/     # For backend topics
-   cd curriculum/ml-ai-engineering/   # For ML/AI topics
-   # etc.
-   ```
-
-2. **Edit the section file directly**:
-   ```bash
-   # Example: Edit programming foundations
-   vim programming-foundations.md
-   ```
-
-3. **Validate your changes**:
-   ```bash
-
+**Maintenance Commands**:
 ```bash
-# 1. Create the new section file
-touch curriculum/platform-devops/container-security.md
+# Validate JSON syntax
+python3 -m json.tool resources/topic-mapper.json >/dev/null
 
-# 2. Add content to the file
-cat > curriculum/platform-devops/container-security.md << 'EOF'
-[← Back to Curriculum](../README.md)
+# Count total resources
+jq '.resources | length' resources/topic-mapper.json
 
----
-
-# Container Security
-
-- **Image Security & Scanning**
-  - Vulnerability scanning with Trivy, Clair, Snyk
-  - Base image selection and minimal images
-  - Multi-stage builds for reduced attack surface
-  - Image signing with Cosign and Notary
-
-- **Runtime Security**
-  - Container runtime security with Falco
-  - Seccomp and AppArmor profiles
-  - Capabilities and privilege escalation prevention
-  - Network policies and micro-segmentation
-
-- **Supply Chain Security**
-  - SBOM generation and management
-  - Dependency scanning and license compliance
-  - Secure CI/CD pipelines
-  - Artifact attestation and provenance
-EOF
-
-# 3. Update the curriculum navigation
-# Edit curriculum/README.md to include the new section
+# Update last_modified
+jq '.metadata.last_updated |= "2024-01-15"' resources/topic-mapper.json > tmp.json && mv tmp.json resources/topic-mapper.json
 ```
 
-### 2. Moving Sections Between Modules
+## 🔧 Workflows
 
-The modular structure makes reorganization simple:
+### Content Addition Workflow
 
-1. **Move the file**:
-   ```bash
-   mv curriculum/old-module/section-name.md curriculum/new-module/
-   ```
+1. **Assess need**: Determine appropriate module and section
+2. **Create/update files**: Use descriptive naming conventions
+3. **Navigation updates**: Modify `curriculum/README.md` for new entries
+4. **Resource integration**: Add relevant learning materials
+5. **Quality validation**: Run checklist verification
+6. **Cross-reference check**: Ensure all links are functional
 
-2. **Update curriculum README**:
-   - Move section listing to appropriate module in `curriculum/README.md`
-   - Update any cross-references in learning paths
+### Resource Curation Workflow
 
-### 3. Reorganizing Module Structure
-
-1. **Plan the new structure** - modules can be reorganized freely
-2. **Move files** to new module directories
-3. **Update curriculum README** with new organization
-4. **Update navigation links** in affected sections
-
-## 🔧 Pure Modular Structure Benefits
-
-The curriculum now operates as a **pure modular system** with these advantages:
-
-- **Maximum Flexibility**: No numbered files means complete reorganization freedom
-- **Independent Editing**: Update any section without affecting others
-- **Collaborative Development**: Multiple contributors can work simultaneously
-- **Easy Expansion**: Add new content anywhere with descriptive naming
-- **Focused Learning**: Study specific topics or follow complete learning paths
-- **Simple Maintenance**: Direct file editing without tool dependencies
-
-## 📋 Quality Assurance Checklist
-
-### Curriculum Changes
-Before making curriculum changes:
-- [ ] Backup current curriculum structure
-- [ ] Test changes in isolated environment
-- [ ] Validate all internal links work correctly
-- [ ] Check cross-references between sections
-- [ ] Ensure consistent formatting and style
-- [ ] Update learning paths if content scope changes
-- [ ] Update curriculum/README.md navigation
-- [ ] Test navigation between sections
-
-### Resource Changes
-Before adding/updating resources:
-- [ ] Verify resource quality and relevance
-- [ ] Check PDF files are properly formatted and readable
-- [ ] Validate all URLs are accessible and current
-- [ ] Update topic-mapper.json with complete metadata
-- [ ] Use standardized citation format in curriculum sections
-- [ ] Test local PDF links work correctly
-- [ ] Ensure resource difficulty levels are accurate
-- [ ] Update resource counts in topic mapper metadata
-
-## 🚀 Development Workflow
-
-1. **Development**: Make changes directly in modular files using descriptive names
-2. **Review**: Validate content and navigation links
-3. **Update Navigation**: Update `curriculum/README.md` if adding/moving sections
-4. **Test**: Verify all links and cross-references work correctly
-5. **Deploy**: Changes are immediately live in the modular structure
+1. **Resource evaluation**: Rate quality, relevance, and accessibility
+2. **Metadata preparation**: Complete all required fields
+3. **Database update**: Add entry to `topic-mapper.json`
+4. **Citation implementation**: Use template in curriculum sections
+5. **Link verification**: Test all PDF and URL references
+6. **Quality review**: Reassess ratings based on usage feedback
 
 ## 🔍 Troubleshooting
 
 ### Curriculum Issues
 
-#### Broken Links
-Manually check and fix broken internal links:
-1. Test navigation between sections
-2. Verify all `[← Back to Curriculum](../README.md)` links work
-3. Check cross-references between related sections
+#### Broken Navigation Links
 
-#### Missing Sections
-If content seems incomplete:
-1. Check that all sections are listed in `curriculum/README.md`
-2. Verify section files exist in their respective module directories
-3. Ensure consistent navigation headers in each section
+**Symptoms**: `[← Back to Curriculum](../README.md)` links fail
+
+**Resolution**:
+```bash
+# Verify curriculum README exists
+ls -la curriculum/README.md
+
+# Test relative path resolution
+cd curriculum/specific-module/
+ls -la ../README.md
+```
+
+#### Missing Section References
+
+**Symptoms**: Sections not appearing in navigation
+
+**Check**:
+- Section exists in correct module directory
+- Listed in `curriculum/README.md`
+- Filename matches navigation reference
 
 #### Inconsistent Formatting
+
+**Resolution**:
 ```bash
-# Auto-format all markdown files (if prettier is available)
-find curriculum -name "*.md" -exec prettier --write {} \;
+# Auto-format markdown (requires prettier)
+find curriculum -name "*.md" -exec npx prettier --write {} \;
 ```
 
 ### Resources System Issues
 
 #### Broken Resource Links
-1. **PDF Links**: Verify files exist in `resources/books/`
+
+**PDF Files**:
+```bash
+# Verify file exists
+ls -la resources/books/problematic-book.pdf
+
+# Check file integrity
+file resources/books/problematic-book.pdf
+```
+
+**URLs**:
+```bash
+# Test URL accessibility
+curl -I https://example.com/resource
+curl -s https://example.com/resource | head -5
+```
+
+#### Topic Mapper Problems
+
+**JSON Syntax Errors**:
+```bash
+# Validate and format JSON
+python3 -m json.tool resources/topic-mapper.json
+
+# Check for duplicate IDs
+jq '.resources[].id' resources/topic-mapper.json | sort | uniq -d
+```
+
+#### Missing Resource Citations
+
+**Check**:
+- Resource exists in `topic-mapper.json`
+- Properly cited in relevant curriculum sections
+- Template format used correctly
+
+### System Health Checks
+
+```bash
+# Full system validation script
+#!/bin/bash
+
+echo "=== Arsenal System Health Check ==="
+
+# 1. Directory structure
+echo "1. Checking directory structure..."
+ls -la curriculum/ | grep -E "\.md$|/$" | wc -l
+echo "Curriculum modules: $(ls curriculum/ | grep -v README.md | wc -l)"
+
+# 2. JSON validation
+echo "2. Validating topic-mapper.json..."
+python3 -m json.tool resources/topic-mapper.json >/dev/null 2>&1
+[ $? -eq 0 ] && echo "✓ JSON valid" || echo "✗ JSON invalid"
+
+# 3. Resource count verification
+echo "3. Resource count..."
+jq '.resources | length' resources/topic-mapper.json
+
+# 4. Broken link detection (basic)
+echo "4. Testing critical links..."
+[ -f curriculum/README.md ] && echo "✓ Main README exists" || echo "✗ Missing curriculum README"
+
+echo "=== Health Check Complete ==="
+```
+
+## ✅ Quality Assurance
+
+### Pre-Commit Checklist
+
+#### Curriculum Changes
+- [ ] Backup current structure before modifications
+- [ ] All new sections include standard navigation header
+- [ ] Cross-references between sections are accurate
+- [ ] `curriculum/README.md` updated with new entries
+- [ ] Internal links tested and functional
+- [ ] Formatting consistent with existing sections
+- [ ] Learning paths remain coherent
+
+#### Resource Additions
+- [ ] Resource quality evaluated (relevance, accuracy, accessibility)
+- [ ] Complete metadata in `topic-mapper.json`
+- [ ] Citation template format used consistently
+- [ ] PDF files properly placed in `resources/books/`
+- [ ] URL resources accessible and current
+- [ ] Difficulty ratings accurate for target audience
+- [ ] Description provides clear value proposition
+
+### Validation Scripts
+
+```bash
+# Link checker (advanced)
+#!/bin/bash
+echo "Checking internal links..."
+
+find curriculum -name "*.md" -exec grep -l "\.\./" {} \; | while read file; do
+  grep "../" "$file" | grep -o "../[^)]*" | while read link; do
+    resolved="$(dirname "$file")/$link"
+    resolved="$(cd "$(dirname "$resolved")" 2>/dev/null && pwd)/$(basename "$resolved")"
+    [ -f "$resolved" ] || [ -d "$resolved" ] || echo "Broken: $file -> $link"
+  done
+done
+```
+
+## 🏆 Best Practices
+
+### Curriculum Development
+- **Descriptive naming**: Section files clearly indicate content scope
+- **Modular depth**: Maintain consistent detail levels across similar topics
+- **Cross-linking**: Connect related concepts between modules
+- **Regular updates**: Refresh content with current industry standards
+- **Accessibility**: Write clear, inclusive technical documentation
+- **Future-proofing**: Design content to accommodate emerging technologies
+
+### Resources Curation
+- **Quality gatekeeping**: Only include high-value, authoritative sources
+- **Standard templates**: Use consistent citation formats across all sections
+- **Metadata completeness**: Fill all fields in topic mapper entries
+- **Local storage strategy**: PDFs only; external resources referenced by URL
+- **Difficulty accuracy**: Align resource complexity with curriculum progression
+- **Quarterly reviews**: Evaluate resource freshness and relevance
+
+### System Maintenance
+- **Automation first**: Script repetitive tasks when possible
+- **Documentation**: Update this guide when processes change
+- **Version control**: Use descriptive commits and pull request descriptions
+- **Testing**: Validate changes in isolated branches before merging
+- **Backup strategy**: Maintain multiple rollback points for major changes
+
+## 📋 Maintainer's Checklist
+
+### Daily Maintenance
+- [ ] Review open issues and pull requests
+- [ ] Monitor system health metrics
+- [ ] Test critical navigation paths
+- [ ] Check recent content updates for accuracy
+
+### Weekly Tasks
+- [ ] Validate all curriculum cross-references
+- [ ] Test resource links for accessibility
+- [ ] Review topic-mapper.json for completeness
+- [ ] Update maintenance documentation as needed
+
+### Monthly Reviews
+- [ ] Assess curriculum completeness vs. roadmap
+- [ ] Evaluate resource quality ratings
+- [ ] Review system performance and bottlenecks
+- [ ] Plan upcoming maintenance priorities
+
+### Quarterly Deep Maintenance
+- [ ] Comprehensive content audit and updates
+- [ ] Resource database cleanup and consolidation
+- [ ] System architecture review and refactoring
+- [ ] User feedback analysis and incorporation
+
+## 🚀 Version Control & Contribution Flow
+
+### Development Workflow
+
+1. **Feature Branch**:
    ```bash
-   ls -la resources/books/
+   git checkout -b feature/add-cryptography-module
    ```
 
-2. **URL Links**: Test external URLs for accessibility
+2. **Content Development**:
+   - Add/modify files following naming conventions
+   - Update navigation references
+   - Add relevant resources
+
+3. **Validation**:
    ```bash
-   # Check URL status (requires curl)
-   curl -I https://example.com/resource
+   # Run quality checks
+   ./scripts/validate-content.sh
+   ./scripts/test-links.sh
    ```
 
-3. **Topic Mapper**: Validate JSON syntax
-   ```bash
-   # Validate JSON syntax
-   python -m json.tool resources/topic-mapper.json > /dev/null
-   ```
+4. **Pull Request**:
+   - Clear description of changes
+   - Reference any related issues
+   - Request review from maintainers
 
-#### Missing Resources
-If resources aren't appearing:
-1. Check resource is listed in `topic-mapper.json`
-2. Verify resource path/URL is correct
-3. Ensure resource is cited in relevant curriculum section
-4. Check resource metadata is complete
+5. **Review Process**:
+   - Content accuracy check
+   - Navigation integrity verification
+   - Style and format consistency
+   - Resource metadata validation
 
-#### Resource Quality Issues
-1. **Outdated Content**: Review and update resource ratings quarterly
-2. **Broken URLs**: Replace or remove inaccessible resources
-3. **Inconsistent Citations**: Use standardized template format
-4. **Missing Metadata**: Complete all required fields in topic mapper
+6. **Merge**:
+   - Squash commits with descriptive message
+   - Update version numbers in metadata
+   - Deploy to live system
 
-### Navigation Issues
-If navigation isn't working properly:
-1. Ensure each section has the correct back-link: `[← Back to Curriculum](../README.md)`
-2. Verify module organization in `curriculum/README.md` matches actual file structure
-3. Check that descriptive filenames are consistent and meaningful
+### Commit Message Standards
 
-## 📝 Best Practices
+```
+feat: add container security module
+  - Complete container security curriculum section
+  - Citations for security tools and best practices
+  - Updated navigation in platform-devops module
 
-### Curriculum Best Practices
-1. **Use descriptive names**: Section files should clearly indicate their content
-2. **Keep modules cohesive**: Group related topics together logically
-3. **Maintain consistent depth**: Similar level of detail across sections
-4. **Use clear cross-references**: Link related concepts between sections
-5. **Update regularly**: Keep content current with industry practices
-6. **Test changes**: Always validate before committing
-7. **Document changes**: Update this guide when adding new processes
-8. **Preserve flexibility**: Avoid hard-coding section orders or numbers
+fix: correct resource link in databases.md
+  - Fixed broken URL for PostgreSQL documentation
+  - Validated link accessibility
 
-### Resources Best Practices
-1. **Quality First**: Only add high-quality, relevant resources
-2. **Standardized Citations**: Always use the template format with icons and ratings
-3. **Complete Metadata**: Fill all required fields in topic-mapper.json
-4. **Local vs URL Strategy**: Store only PDFs locally, reference everything else by URL
-5. **Regular Maintenance**: Review and update resources quarterly
-6. **Topic Alignment**: Ensure resources directly support curriculum topics
-7. **Difficulty Accuracy**: Assign appropriate difficulty levels
-8. **Community Feedback**: Consider user feedback for resource quality ratings
-9. **Version Control**: Track resource additions and updates in topic mapper
-10. **Accessibility**: Ensure resources are accessible and not behind paywalls when possible
+refactor: reorganize professional skills module
+  - Moved authorization content to backend-systems
+  - Updated all cross-references
+  - Improved module coherence
+```
 
-## 🎯 Flexibility Benefits
+## ⚠️ Common Pitfalls
 
-This non-numbered approach provides:
-- **Complete reorganization freedom**: Sections can be moved without renaming
-- **Semantic file names**: Names describe content, not arbitrary order
-- **Easy collaboration**: No conflicts over section numbering
-- **Future-proof structure**: New sections fit naturally anywhere
-- **Content-focused**: Organization follows logical themes, not numbers
+### File Organization Issues
+- **Wrong module placement**: Content placed in incorrect directory
+- **Poor naming**: Section names not descriptive or inconsistent
+- **Missing navigation**: New sections not added to curriculum README
 
-## 🤝 Contributing
+### Link Management Problems
+- **Incorrect relative paths**: `../../../` instead of `../` for navigation
+- **Broken resource links**: PDFs moved without updating path references
+- **Circular references**: Sections linking to each other without clear hierarchy
 
-See [contributing.md](contributing.md) for detailed contribution guidelines.
+### Quality Assurance Failures
+- **Incomplete metadata**: Missing fields in topic-mapper.json entries
+- **Inconsistent formatting**: Markdown styles vary across sections
+- **Accessibility issues**: Images without alt text, poor heading structure
 
-## 📞 Support
+### System Architecture Mistakes
+- **Dependency assumptions**: Hard-coding section relationships
+- **Version conflicts**: Multiple contributors editing metadata simultaneously
+- **Resource sprawl**: Adding low-quality materials without curation
 
-For maintenance questions or issues:
-- Check this documentation first
-- Review the curriculum structure in `curriculum/README.md`
-- Create an issue in the repository
+### Recovery Strategies
+
+**Quick Fixes**:
+```bash
+# Bulk navigation header addition
+find curriculum -name "*.md" -not -name "README.md" -exec sh -c '
+  if ! head -2 "$1" | grep -q "Back to Curriculum"; then
+    sed -i "1i[← Back to Curriculum](../README.md)\n---\n" "$1"
+  fi
+' _ {} \;
+
+# Resource link verification
+jq -r '.resources[].url // .resources[].path' resources/topic-mapper.json | \
+xargs -I {} sh -c 'echo "Testing {}" && curl -s -o /dev/null -w "%{http_code}" "{}"'
+```
+
+---
+
+**Remember**: The Arsenal system's modular architecture is designed for flexibility. Focus on content quality, maintain strict consistency in formatting and navigation, and always validate changes across the entire system before deployment.
