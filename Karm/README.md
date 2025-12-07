@@ -232,18 +232,32 @@ Each path includes:
 ## 🗺️ Learning Roadmaps
 
 ### **Available Roadmaps**
+- **[24-Week Staff Engineer Program](roadmaps/24-week-staff-engineer.md)**: Complete transformation from fundamentals to Staff-level competencies (40-50 hours/week)
+- **[52-Week Advanced Mastery Program](roadmaps/52-week-advanced-mastery.md)**: Principal Engineer path with leadership, innovation, and strategic influence (30-40 hours/week)
 - **30-Day Sprint**: Intensive foundation building (4-6 hours/day)
 - **90-Day Acceleration**: Full-stack focus (3-4 hours/day)
 - **180-Day Mastery**: Comprehensive career preparation (2-3 hours/day)
 - **365-Day Transformation**: Complete ML/AI systems expert (>1 year)
 
-### **Sample 30-Day Sprint**
-| Week | Focus | Deliverables |
-|------|-------|--------------|
-| **1** | Programming Fundamentals | 3 skill assessments, 2 small projects |
-| **2** | Backend Systems | REST API with database, authentication |
-| **3** | Frontend Integration | React dashboard with API integration |
-| **4** | DevOps Basics | Containerized deployment, CI basic setup |
+### **24-Week Staff Engineer Program Overview**
+| Phase | Weeks | Focus | Key Deliverables |
+|-------|-------|-------|------------------|
+| **Foundations** | 1-4 | Programming, Web Dev, APIs | 4 core projects, algorithm mastery |
+| **Backend & Data** | 5-8 | Databases, Microservices, Cloud | Scalable APIs, cloud deployments |
+| **System Design** | 9-12 | Distributed Systems, Security | High-scale architectures, security platforms |
+| **Advanced Topics** | 13-16 | AI/ML, Performance, Data Eng | ML systems, optimization, analytics |
+| **Enterprise** | 17-20 | Global Systems, AI Platforms | Enterprise integrations, advanced AI |
+| **Leadership** | 21-24 | Architecture Reviews, RFCs, Incidents | Technical leadership, portfolio completion |
+
+### **52-Week Advanced Mastery Program Overview**
+| Phase | Weeks | Focus | Key Deliverables |
+|-------|-------|-------|------------------|
+| **Enterprise Scale** | 25-28 | Integration Patterns, Global Systems | Enterprise platforms, multi-region deployments |
+| **AI/ML Systems** | 29-32 | Production ML, MLOps, Advanced AI | Scalable ML platforms, AI governance |
+| **Research & Innovation** | 33-36 | Emerging Tech, Performance, Research | Novel algorithms, research publications |
+| **Staff Leadership** | 37-40 | Governance, Cross-Team, Strategy | Architecture standards, technical strategies |
+| **Principal Expertise** | 41-46 | Industry Influence, Acquisitions, Org Design | Thought leadership, acquisition due diligence |
+| **Principal Mastery** | 47-52 | Ecosystem Building, Future Strategy, Executive Comm | Industry standards, executive relationships |
 
 ---
 

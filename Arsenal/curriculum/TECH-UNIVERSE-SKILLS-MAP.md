@@ -1347,4 +1347,4 @@ Technical leadership goes beyond individual contribution to enabling teams and o
 
 ---
 
-*This document represents a comprehensive roadmap for professional growth in software engineering. Use it as your guide for systematic skill development over your career. Remember: growth is not linear, and the most important skills are often the ones that help you collaborate effectively with others and make thoughtful technical decisions.*
+*This document repleresents a comprehensive roadmap for professional growth in software engineering. Use it as your guide for systematic skill development over your career. Remember: growth is not linear, and the most important skills are often the ones that help you collaborate effectively with others and make thoughtful technical decisions.*
