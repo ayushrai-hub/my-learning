@@ -310,6 +310,20 @@ We welcome contributions to both learning platforms! The modular structure makes
 
 ---
 
+## 🙏 Credits & Attribution
+
+We gratefully acknowledge the contributions of talented individuals who have created curriculum content for this learning platform:
+
+### **Curriculum Contributors**
+
+- **Ayush Rai** - Monitoring & Observability Integration
+  - **Website**: [https://ayush-rai-work.netlify.app/](https://ayush-rai-work.netlify.app/)
+  - **LinkedIn**: [https://www.linkedin.com/in/ayushrai02](https://www.linkedin.com/in/ayushrai02)
+
+**For usage permissions or collaboration inquiries, please contact the respective contributors.**
+
+---
+
 **Welcome to Tech-Arsenal and Karm: Transform your career through rigorous practice and mastery-driven learning.**
 
 **Choose your journey - methodical exploration with Tech-Arsenal or accelerated mastery with Karm.**

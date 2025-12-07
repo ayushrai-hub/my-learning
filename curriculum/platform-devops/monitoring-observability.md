@@ -72,3 +72,14 @@
   - Security: log sanitization, access control, audit trails
   - Performance: log volume management, sampling, compression
   - Analytics: pattern detection, anomaly identification, trend analysis
+
+---
+
+## Credits & Attribution
+
+This curriculum content on Monitoring & Observability Integration was created by **Ayush Rai**.
+
+- **Website**: [https://ayush-rai-work.netlify.app/](https://ayush-rai-work.netlify.app/)
+- **LinkedIn**: [https://www.linkedin.com/in/ayushrai02](https://www.linkedin.com/in/ayushrai02)
+
+For usage permissions or collaboration inquiries, please contact the author.
